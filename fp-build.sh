@@ -39,7 +39,7 @@ if ! flatpak-builder \
     --verbose --sandbox --user \
     --bundle-sources --force-clean --ccache \
     --install-deps-from=flathub \
-    --default-branch=localtest \
+    --default-branch=test \
     --state-dir="$XDG_CACHE_HOME/flatpak-builder" \
     --extra-sources="$XDG_CACHE_HOME/flatpak-builder/downloads" \
     "$XDG_CACHE_HOME/flatpak-builder-builddir/${1%.*}" "$1"
@@ -51,7 +51,7 @@ fi
 if ! flatpak-builder \
     --user --install --force-clean \
     --repo="$XDG_CACHE_HOME/flatpak-builder-repo/" \
-    --default-branch=localtest \
+    --default-branch=test \
     --state-dir="$XDG_CACHE_HOME/flatpak-builder" \
     "$XDG_CACHE_HOME/flatpak-builder-builddir/${1%.*}" "$1"
 then
